@@ -300,6 +300,7 @@ public class UpdateService extends Service {
             UpdateService updateService = mReference.get();
             if (updateService != null) {
                 updateService.mDownloading = false;
+                updateService.stopSelf();
             }
         }
     }
